@@ -8,6 +8,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.1
   '@vue/test-utils': ^2.0.0-rc.20
   '@vueuse/core': ^8.2.5
+  axios: ^0.26.1
   eslint: ^8.13.0
   jsdom: ^19.0.0
   pnpm: ^6.32.6
@@ -24,6 +25,7 @@ specifiers:
 
 dependencies:
   '@vueuse/core': 8.2.5_vue@3.2.32
+  axios: 0.26.1
   vue: 3.2.32
   vue-router: 4.0.14_vue@3.2.32
 
@@ -865,7 +867,6 @@ packages:
       follow-redirects: 1.14.9
     transitivePeerDependencies:
       - debug
-    dev: true
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1974,7 +1975,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: true
 
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}
