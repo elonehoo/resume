@@ -66,5 +66,20 @@
     "mobile":"Android, Kotlin, PWA",
     "devOps":"AWS, AliCloud, TencentCloud",
     "languages":"Java, Go, C#"
-  }
+  },
+  "education":[
+    {
+      "profession":"Computer Application, College Degree",
+      "school":"HangZhou Polytechnic",
+      "time":"Sep 2019 - Jun 2022"
+    }
+  ],
+  "awards":[
+    {
+      "name":"Excellent Graduation HangZhou Polytechnic",
+      "unit":"HangZhou Polytechnic",
+      "time":"Jun 2021"
+    }
+  ]
+  
 }

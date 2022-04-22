@@ -60,7 +60,7 @@ import resume from '~/resume.json'
               <p v-html="resume.about">  </p>
             </div>
             <div class='px10'></div>
-            
+
             <div id="work-projects-group">
               <div id="projects">
                 <h4><span class="title">Projects</span></h4>
@@ -137,33 +137,15 @@ import resume from '~/resume.json'
             <div id="education">
               <h4><span class="title">Education</span></h4>
               <ul class="list-unstyled">
-                  <li class="card-nested">
+                  <li v-for="item in resume.education" class="card-nested">
                     <div class="content has-sidebar">
                       <p class="clear-margin-sm">
-                        <strong> Computer Science, Master of Science</strong>,&nbsp;
-                        National Chengchi University, Taipei
+                        <strong> {{item.profession}}</strong>,&nbsp;
+                        {{item.school}}
                       </p>
                       <p class="text-muted clear-margin-sm">
                         <small>
-                          Sep 2019 -  Currently Pursuing 
-                        </small>
-                      </p>
-                      <div>Researching in Human-Computer Interaction(HCI) field</div>
-                      <i></i>
-                      <div class="space-top labels">
-                        
-                      </div>
-                    </div>
-                  </li>
-                  <li class="card-nested">
-                    <div class="content has-sidebar">
-                      <p class="clear-margin-sm">
-                        <strong> Computer Science, Bachelor of Science</strong>,&nbsp;
-                        Tamkang University, New Taipei
-                      </p>
-                      <p class="text-muted clear-margin-sm">
-                        <small>
-                          Sep 2015 -  Jun 2019 
+                          {{item.time}}
                         </small>
                       </p>
                       <div></div>
@@ -177,7 +159,7 @@ import resume from '~/resume.json'
             </div>
 
 
-            <h4 id="publications"><span class="title">Talks</span> </h4>
+            <h4 v-if="resume.talks !== undefined" id="publications"><span class="title">Talks</span> </h4>
             <ul class="list-unstyled">
                 <li class="card-nested" style="margin-bottom: 0.5em">
                   <div class="content has-sidebar">
@@ -192,55 +174,18 @@ import resume from '~/resume.json'
                     <p class="clear-margin">Talked about the reactivity system and Composition API in Vue.js</p>
                   </div>
                 </li>
-                <li class="card-nested" style="margin-bottom: 0.5em">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong><a href="https://www.microsoft.com/en-us/ignite-the-tour" target="_blank">Microsoft Ignite Tour, Taipei</a></strong>,&nbsp;
-                      Microsoft
-                    </p>
-                    <p class="text-muted clear-margin-sm">
-                      <small> Feb 17, 2020 (event cancelled due to COVID-19)</small>
-                      <small></small>
-                    </p>
-                    <p class="clear-margin">Invited to talk about VS Code extension development with i18n-ally</p>
-                  </div>
-                </li>
             </ul>
 
             <h4 id="awards"><span class="title">Awards</span></h4>
             <ul class="list-unstyled">
-                <li class="card-nested">
+                <li v-for="item in resume.awards" class="card-nested">
                   <div class="content has-sidebar">
                     <p class="clear-margin-sm" itemprop="award">
-                      <strong>Idea Maker Competition Masterpiece Award</strong>,&nbsp;
-                      Oriental Institute of Technology
+                      <strong>{{item.name}}</strong>,&nbsp;
+                      {{item.unit}}
                     </p>
                     <p class="text-muted clear-margin-sm">
-                      <small> Oct 2018 </small>
-                    </p>
-                    
-                  </div>
-                </li>
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm" itemprop="award">
-                      <strong>Graduation Project Competition Masterpiece Award</strong>,&nbsp;
-                      Tamkang University
-                    </p>
-                    <p class="text-muted clear-margin-sm">
-                      <small> Jun 2018 </small>
-                    </p>
-                    
-                  </div>
-                </li>
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm" itemprop="award">
-                      <strong>First Class Scholarship for Academics (top one)</strong>,&nbsp;
-                      Tamkang University
-                    </p>
-                    <p class="text-muted clear-margin-sm">
-                      <small> Nov 2016 </small>
+                      <small> {{item.time}} </small>
                     </p>
                     
                   </div>
