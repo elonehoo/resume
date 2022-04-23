@@ -160,18 +160,18 @@ import resume from '~/resume.json'
 
 
             <h4 v-if="resume.talks !== undefined" id="publications"><span class="title">Talks</span> </h4>
-            <ul class="list-unstyled">
-                <li class="card-nested" style="margin-bottom: 0.5em">
+            <ul v-if="resume.talks !== undefined" class="list-unstyled">
+                <li v-for="item in resume.talks" class="card-nested" style="margin-bottom: 0.5em">
                   <div class="content has-sidebar">
                     <p class="clear-margin-sm">
-                      <strong><a href="https://wemp.app/posts/5ec27920-8201-4ef2-9027-92b09b136fab" target="_blank">Binjiang Front-End Developer Salon, Hangzhou</a></strong>,&nbsp;
-                      Bingjiang Front-End Union
+                      <strong><a :href="item.location_link" target="_blank">{{item.location}}</a></strong>,&nbsp;
+                      {{item.unit}}
                     </p>
                     <p class="text-muted clear-margin-sm">
-                      <small> Sep 26, 2020 </small>
-                      <small>,&nbsp;<a href="https://antfu.me/posts/binfe-2020-zh/" target="_blank">Slides</a></small>
+                      <small> {{item.time}} </small>
+                      <small>,&nbsp;<a :href="item.slides_link" target="_blank">Slides</a></small>
                     </p>
-                    <p class="clear-margin">Talked about the reactivity system and Composition API in Vue.js</p>
+                    <p class="clear-margin">{{item.describe}}</p>
                   </div>
                 </li>
             </ul>
@@ -197,24 +197,9 @@ import resume from '~/resume.json'
 
             <h4 id="languages"><span class="title">Languages</span> </h4>
             <p class="card-nested">
-                <span class="enumeration"><strong>Chinese</strong> (Native speaker)</span>
-                <span class="enumeration"><strong>English</strong> (Fluent)</span>
-                <span class="enumeration"><strong>Japanese</strong> (Intermediate)</span>
+                <span v-for="item in resume.languages" class="enumeration"><strong>{{item.name}}</strong> ({{item.proficiency}})</span>
             </p>
 
-            <div style="text-align:center">
-              <div class="detail no-print" style="font-size:1.5rem;margin-top:2rem;">
-                <a href="https://resume.antfu.me/resume.pdf" class="info" itemprop="pdf" target="_blank">
-                  PDF Version
-                </a>
-              </div>
-               <div class="detail print-only" style="font-size:1.5rem;margin-top:2rem;" >
-                <a href="https://resume.antfu.me" class="info" itemprop="pdf" target="_blank">
-                  Online Version
-                </a>
-              </div>
-              <div style="opacity:0.7; font-size:1.2rem;margin-top:1rem;">Last updated at December 4th 2020, 3:54:34 am</div>
-            </div>
           </div>
         </div>
       </section>

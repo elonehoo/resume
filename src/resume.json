@@ -80,6 +80,16 @@
       "unit":"HangZhou Polytechnic",
       "time":"Jun 2021"
     }
+  ],
+  "languages":[
+    {
+      "name":"Chinese",
+      "proficiency":"Native speaker"
+    },
+    {
+      "name":"English",
+      "proficiency":"Fluent"
+    }
   ]
   
 }
