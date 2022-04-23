@@ -1,9 +1,9 @@
 <div align='center'>
-<img wigth='100px' height='100px' src="https://viden.netlify.app/favicon.svg">
+<img wigth='100px' height='100px' src="./public/favicon.svg">
 </div>
 
 <h1 align='center'>
-Vitetem Mini
+Résumé
 </h1>
 
 ## Features
