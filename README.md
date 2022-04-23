@@ -9,12 +9,14 @@ Résumé
 ## What is resume？
 
 <div align="center">
+
 The imitated project is [resume](https://github.com/antfu/resume) of [Anthony Fu](https://github.com/antfu)
+
 </div>
 
 ![demo.png](./public/markdown/demo.png)
 
-[Live Demo](resume.elonehoo.xyz)
+[Live Demo](https://resume.elonehoo.xyz/)
 
 ## How to modify
 
