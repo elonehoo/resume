@@ -27,12 +27,12 @@ jobs:
         run: pnpm run build
 
       - name: echo cname
-        run: echo 'resume.elonehoo.xyz' > .vitepress/dist/CNAME
+        run: echo 'resume.elonehoo.xyz' > dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: .vitepress/dist
+          build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
