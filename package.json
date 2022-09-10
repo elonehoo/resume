@@ -1,7 +1,7 @@
 {
   "name": "@elonhoo/resume",
   "version": "0.0.1",
-  "packageManager": "pnpm@6.32.6",
+  "packageManager": "pnpm@6.34.0",
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333 --open",
