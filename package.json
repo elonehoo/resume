@@ -1,7 +1,7 @@
 {
   "name": "@elonhoo/resume",
   "version": "0.0.1",
-  "packageManager": "pnpm@7.11.0",
+  "packageManager": "pnpm@7.13.5",
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333 --open",
@@ -25,7 +25,7 @@
     "@vue/test-utils": "2.0.2",
     "eslint": "8.23.0",
     "jsdom": "20.0.0",
-    "pnpm": "7.11.0",
+    "pnpm": "7.13.5",
     "typescript": "4.8.3",
     "unocss": "0.45.18",
     "unplugin-auto-import": "0.11.2",
