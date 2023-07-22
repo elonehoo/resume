@@ -13,26 +13,26 @@
     "@vueuse/core": "10.2.1",
     "axios": "1.4.0",
     "vue": "3.3.4",
-    "vue-router": "4.2.2"
+    "vue-router": "4.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.39.7",
+    "@antfu/eslint-config": "0.39.8",
     "@iconify-json/carbon": "1.1.18",
-    "@types/node": "18.16.19",
-    "@unocss/reset": "0.53.4",
+    "@types/node": "18.16.20",
+    "@unocss/reset": "0.53.6",
     "@vitejs/plugin-vue": "4.2.3",
-    "@vue/test-utils": "2.4.0",
-    "eslint": "8.44.0",
+    "@vue/test-utils": "2.4.1",
+    "eslint": "8.45.0",
     "jsdom": "22.1.0",
-    "pnpm": "8.6.6",
+    "pnpm": "8.6.9",
     "typescript": "5.1.6",
-    "unocss": "0.53.4",
-    "unplugin-auto-import": "0.16.5",
+    "unocss": "0.53.6",
+    "unplugin-auto-import": "0.16.6",
     "unplugin-vue-components": "0.25.1",
-    "vite": "4.3.9",
+    "vite": "4.4.6",
     "vite-plugin-pages": "0.31.0",
-    "vitest": "0.32.4",
-    "vue-tsc": "1.8.3"
+    "vitest": "0.33.0",
+    "vue-tsc": "1.8.6"
   },
   "eslintConfig": {
     "extends": "@antfu"
