@@ -16,23 +16,23 @@
     "vue-router": "4.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.42.0",
+    "@antfu/eslint-config": "0.43.0",
     "@iconify-json/carbon": "1.1.21",
-    "@types/node": "18.17.15",
-    "@unocss/reset": "0.55.7",
+    "@types/node": "18.17.18",
+    "@unocss/reset": "0.56.0",
     "@vitejs/plugin-vue": "4.3.4",
     "@vue/test-utils": "2.4.1",
     "eslint": "8.49.0",
     "jsdom": "22.1.0",
-    "pnpm": "8.7.5",
+    "pnpm": "8.7.6",
     "typescript": "5.2.2",
-    "unocss": "0.55.7",
+    "unocss": "0.56.0",
     "unplugin-auto-import": "0.16.6",
     "unplugin-vue-components": "0.25.2",
     "vite": "4.4.9",
     "vite-plugin-pages": "0.31.0",
     "vitest": "0.34.4",
-    "vue-tsc": "1.8.11"
+    "vue-tsc": "1.8.13"
   },
   "eslintConfig": {
     "extends": "@antfu"
