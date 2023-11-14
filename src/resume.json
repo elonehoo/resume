@@ -1,95 +1,95 @@
 {
-  "profile":{
-    "picAlt":"Elone Hoo",
-    "picSrc":"https://github.com/elonehoo.png"
+  "profile": {
+    "picAlt": "Elone Hoo",
+    "picSrc": "https://github.com/elonehoo.png"
   },
-  "contactDetails":{
-    "name":"Elone Hoo",
-    "job":"Programmer",
-    "email":"hi@elonehoo.me"
+  "contactDetails": {
+    "name": "Elone Hoo",
+    "job": "Programmer",
+    "email": "hi@elonehoo.me"
   },
-  "socialLinks":{
-    "github":"https://github.com/elonehoo",
-    "twitter":"https://twitter.com/huchengye",
-    "user":"https://elonehoo.me"
+  "socialLinks": {
+    "github": "https://github.com/elonehoo",
+    "twitter": "https://twitter.com/huchengye",
+    "user": "https://elonehoo.me"
   },
-  "about":"My name is Elone Hoo, a programmer who likes open source. I really like to bring the ideas in my head into reality, into entities that everyone can see.<br /><br />I'm also an open source enthusiast and maintainer. I love the way open source enables collaboration and knowledge sharing, and I'm excited to see what I do finally feed back to the community and industry.<br /><br />In addition to programming, I also enjoy video games and reading books in areas I have absolutely no idea about.",
-  "projects":{
-    "items":[
+  "about": "My name is Elone Hoo, a programmer who likes open source. I really like to bring the ideas in my head into reality, into entities that everyone can see.<br /><br />I'm also an open source enthusiast and maintainer. I love the way open source enables collaboration and knowledge sharing, and I'm excited to see what I do finally feed back to the community and industry.<br /><br />In addition to programming, I also enjoy video games and reading books in areas I have absolutely no idea about.",
+  "projects": {
+    "items": [
       {
-        "name":"vitest-cn-docs",
-        "github_link":"https://github.com/vitest-dev/docs-cn",
-        "home_link":"https://cn.vitest.dev/",
-        "text_muted":"Vitest Chinese Documentation",
-        "github_stars":"https://api.github.com/repos/vitest-dev/docs-cn"
+        "name": "vitest-cn-docs",
+        "github_link": "https://github.com/vitest-dev/docs-cn",
+        "home_link": "https://cn.vitest.dev/",
+        "text_muted": "Vitest Chinese Documentation",
+        "github_stars": "https://api.github.com/repos/vitest-dev/docs-cn"
       },
       {
-        "name":"java-axios",
-        "github_link":"https://github.com/xiao-akatsuki/axios",
-        "home_link":"https://axios.akatsuki.top/",
-        "text_muted":"A make it easier for java to send HTTPS",
-        "github_stars":"https://api.github.com/repos/xiao-akatsuki/axios"
+        "name": "java-axios",
+        "github_link": "https://github.com/xiao-akatsuki/axios",
+        "home_link": "https://axios.akatsuki.top/",
+        "text_muted": "A make it easier for java to send HTTPS",
+        "github_stars": "https://api.github.com/repos/xiao-akatsuki/axios"
       },
       {
-        "name":"vitepress-theme-simple",
-        "github_link":"https://github.com/elonehoo/vitepress-theme-simple",
-        "home_link":"https://simple.elonehoo.xyz/",
-        "text_muted":"vitepress theme blog",
-        "github_stars":"https://api.github.com/repos/elonehoo/vitepress-theme-simple"
+        "name": "vitepress-theme-simple",
+        "github_link": "https://github.com/elonehoo/vitepress-theme-simple",
+        "home_link": "https://simple.elonehoo.xyz/",
+        "text_muted": "vitepress theme blog",
+        "github_stars": "https://api.github.com/repos/elonehoo/vitepress-theme-simple"
       },
       {
-        "name":"paragraph-highlight",
-        "github_link":"https://github.com/elonehoo/paragraph-highlight",
-        "home_link":"https://paragraph.elonehoo.xyz/",
-        "text_muted":"vue paragraph highlight",
-        "github_stars":"https://api.github.com/repos/elonehoo/paragraph-highlight"
+        "name": "paragraph-highlight",
+        "github_link": "https://github.com/elonehoo/paragraph-highlight",
+        "home_link": "https://paragraph.elonehoo.xyz/",
+        "text_muted": "vue paragraph highlight",
+        "github_stars": "https://api.github.com/repos/elonehoo/paragraph-highlight"
       }
     ],
-    "more":"https://elonehoo.xyz/projects.html"
+    "more": "https://elonehoo.xyz/projects.html"
   },
-  "work":[
+  "work": [
     {
-      "name":"Open Source",
-      "link":"https://github.com/elonehoo",
-      "job_name":"OSS Developer",
-      "space_right":"Sep 2018 - Present | Github",
-      "highlight":[
-        {"content":"Received 200+ stars on personal projects"},
-        {"content":"Maintaining numerous popular projects"},
-        {"content":"Actively contribute to the Open Source community"}
+      "name": "Open Source",
+      "link": "https://github.com/elonehoo",
+      "job_name": "OSS Developer",
+      "space_right": "Sep 2018 - Present | Github",
+      "highlight": [
+        { "content": "Received 200+ stars on personal projects" },
+        { "content": "Maintaining numerous popular projects" },
+        { "content": "Actively contribute to the Open Source community" }
       ]
     }
   ],
-  "stacks":{
-    "frontend":"Typescript, Javascript, Vue",
-    "backend":"Node, MongoDB, MySQL, Serverless, Nginx, Docker",
-    "mobile":"Android, Kotlin, PWA",
-    "devOps":"AWS, AliCloud, TencentCloud",
-    "languages":"Java, Go, C#"
+  "stacks": {
+    "frontend": "Typescript, Javascript, Vue",
+    "backend": "Node, MongoDB, MySQL, Serverless, Nginx, Docker",
+    "mobile": "Android, Kotlin, PWA",
+    "devOps": "AWS, AliCloud, TencentCloud",
+    "languages": "Java, Go, C#"
   },
-  "education":[
+  "education": [
     {
-      "profession":"Computer Application, College Degree",
-      "school":"HangZhou Polytechnic",
-      "time":"Sep 2019 - Jun 2022"
+      "profession": "Computer Application, College Degree",
+      "school": "HangZhou Polytechnic",
+      "time": "Sep 2019 - Jun 2022"
     }
   ],
-  "awards":[
+  "awards": [
     {
-      "name":"Excellent Graduation HangZhou Polytechnic",
-      "unit":"HangZhou Polytechnic",
-      "time":"Jun 2021"
+      "name": "Excellent Graduation HangZhou Polytechnic",
+      "unit": "HangZhou Polytechnic",
+      "time": "Jun 2021"
     }
   ],
-  "languages":[
+  "languages": [
     {
-      "name":"Chinese",
-      "proficiency":"Native speaker"
+      "name": "Chinese",
+      "proficiency": "Native speaker"
     },
     {
-      "name":"English",
-      "proficiency":"Fluent"
+      "name": "English",
+      "proficiency": "Fluent"
     }
   ]
-  
+
 }

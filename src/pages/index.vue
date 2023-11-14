@@ -1,209 +1,224 @@
 <script setup lang="ts">
 import resume from '~/resume.json'
-
 </script>
 
 <template>
   <div class="container">
-      <section class="row">
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="profile-card">
-                <div v-if="resume.profile !== undefined" class="profile-pic">
-                  <img class="media-object img-circle center-block"
-                    :alt="resume.profile.picAlt" :src="resume.profile.picSrc" itemprop="image">
+    <section class="row">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="profile-card">
+            <div v-if="resume.profile !== undefined" class="profile-pic">
+              <img
+                class="media-object img-circle center-block"
+                :alt="resume.profile.picAlt" :src="resume.profile.picSrc" itemprop="image"
+              >
+            </div>
+            <div class="contact-details">
+              <div class="name-and-profession">
+                <h3 class="text-bolder name" itemprop="name">
+                  {{ resume.contactDetails.name }}
+                </h3>
+                <div class="text-muted job" itemprop="jobTitle">
+                  {{ resume.contactDetails.job }}
                 </div>
-                <div class="contact-details">
-                  <div class="name-and-profession">
-                    <h3 class="text-bolder name" itemprop="name"> {{resume.contactDetails.name}}</h3>
-                    <div class="text-muted job" itemprop="jobTitle">{{resume.contactDetails.job}}</div>
-                  </div>
-
-                    <div class="detail">
-                      <span class="info">
-                        <a :href="`mailto:` + resume.contactDetails.email" class="link-disguise" itemprop="email" target="_blank">{{resume.contactDetails.email}}</a>
-                      </span>
-                    </div>
-
-
-                </div>
-
-              <div class="social-links">
-                  <a v-if="resume.socialLinks.github !== undefined" class="social-link icon" :href="resume.socialLinks.github" target="_blank">
-                    <GitHub />
-                  </a>
-                  <a v-if="resume.socialLinks.linkedin !== undefined" class="social-link icon" :href="resume.socialLinks.linkedin" target="_blank">
-                    <Linkedin />
-                  </a>
-                  <a v-if="resume.socialLinks.twitter !== undefined" class="social-link icon" :href="resume.socialLinks.twitter" target="_blank">
-                    <Twitter />
-                  </a>
-                  <a v-if="resume.socialLinks.instagram !== undefined" class="social-link icon" :href="resume.socialLinks.instagram" target="_blank">
-                    <Instagram />
-                  </a>
-                  <a class="social-link icon" :href="resume.socialLinks.user" target="_blank">
-                    <User />
-                  </a>
               </div>
+
+              <div class="detail">
+                <span class="info">
+                  <a :href="`mailto:${resume.contactDetails.email}`" class="link-disguise" itemprop="email" target="_blank">{{ resume.contactDetails.email }}</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a v-if="resume.socialLinks.github !== undefined" class="social-link icon" :href="resume.socialLinks.github" target="_blank">
+                <GitHub />
+              </a>
+              <a v-if="resume.socialLinks.linkedin !== undefined" class="social-link icon" :href="resume.socialLinks.linkedin" target="_blank">
+                <Linkedin />
+              </a>
+              <a v-if="resume.socialLinks.twitter !== undefined" class="social-link icon" :href="resume.socialLinks.twitter" target="_blank">
+                <Twitter />
+              </a>
+              <a v-if="resume.socialLinks.instagram !== undefined" class="social-link icon" :href="resume.socialLinks.instagram" target="_blank">
+                <Instagram />
+              </a>
+              <a class="social-link icon" :href="resume.socialLinks.user" target="_blank">
+                <User />
+              </a>
             </div>
           </div>
-
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="row page">
-        <div class="card-wrapper">
-          <div class="card background-card">
+    <section class="row page">
+      <div class="card-wrapper">
+        <div class="card background-card">
+          <h4 id="about">
+            <span class="title">About</span>
+          </h4>
+          <div class="card-nested" itemprop="description">
+            <p v-html="resume.about" />
+          </div>
+          <div class="px10" />
 
-            <h4 id="about"> <span class="title">About</span> </h4>
-            <div class="card-nested" itemprop="description">
-              <p v-html="resume.about">  </p>
-            </div>
-            <div class='px10'></div>
-
-            <div id="work-projects-group">
-              <div id="projects">
-                <h4><span class="title">Projects</span></h4>
-                <div class="list-unstyled projects">
-                  <div class="project-table">
-                    <li v-for="item in resume.projects.items" class="card-nested ">
-                      <div class="content has-sidebar">
-                        <p class="clear-margin-sm" itemprop="award">
-                          <strong>{{item.name}}</strong>&nbsp
-                            <a v-if="item.github_link !== undefined" :href="item.github_link" class='icon' target="_blank">
-                              <GitHub />
-                            </a>
-                            <a v-if="item.home_link !== undefined" :href="item.home_link" class='icon' target="_blank">
-                              <ArrowUpRight />
-                            </a>
-                        </p>
-                        <p v-if="item.text_muted !== undefined" class="text-muted">
-                          <small> {{item.text_muted}} </small>
-                        </p>
-                        <p v-if="item.github_stars !== undefined" class="github-stars">
-                          <Stars class="stars" :url="item.github_stars" />
-                        </p>
-                      </div>
-                    </li>
-                  </div>
-                    <li v-if="resume.projects.more !== undefined" class="card-nested text-muted">
-                      <a :href="resume.projects.more" target="_blank">More Projects...</a>
-                    </li>
-                  <div class='px10'></div>
-                </div>
-              </div>
-
-              <div id="work-experience">
-                <h4> <span class="title">Work Experience</span> </h4>
-                <ul class="list-unstyled">
-                    <li v-for="item in resume.work" class="card-nested relax">
-                      <div class="content has-sidebar">
-                        <p class="clear-margin-sm">
-                          <strong><a :href="item.link" target="_blank">{{item.name}}</a></strong>
-                          <span class="text-muted" style="margin-left: 0.3em">{{item.job_name}}</span>
-                        </p>
-                        <p class="text-muted">
-                          <small>
-                            <span class="space-right"> {{item.space_right}}</span>
-                          </small>
-                        </p>
-                        <p></p>
-                          <ul class='highlight'>
-                              <li v-for="date in item.highlight" v-html="date.content" />
-                          </ul>
-                      </div>
-                    </li>
-                </ul>
-              </div>
-            </div>
-
-            <h4 id="skills"><span class="title">Stacks</span> </h4>
-            <div class="card-nested" itemprop="description">
-              <div class="skill-table">
-                    <div class='name'>Frontend</div> 
-                    <div>{{resume.stacks.frontend}}</div>
-                    <div class='name'>Backend</div> 
-                    <div>{{resume.stacks.backend}}</div>
-                    <div class='name'>Mobile</div> 
-                    <div>{{resume.stacks.mobile}}</div>
-                    <div class='name'>DevOps</div> 
-                    <div>{{resume.stacks.devOps}}</div>
-                    <div class='name'>Languages</div> 
-                    <div>{{resume.stacks.languages}}</div>
-              </div>
-            </div>
-            <div class='px10'></div>
-
-            <div id="education">
-              <h4><span class="title">Education</span></h4>
-              <ul class="list-unstyled">
-                  <li v-for="item in resume.education" class="card-nested">
+          <div id="work-projects-group">
+            <div id="projects">
+              <h4><span class="title">Projects</span></h4>
+              <div class="list-unstyled projects">
+                <div class="project-table">
+                  <li v-for="item in resume.projects.items" class="card-nested ">
                     <div class="content has-sidebar">
-                      <p class="clear-margin-sm">
-                        <strong> {{item.profession}}</strong>,&nbsp;
-                        {{item.school}}
+                      <p class="clear-margin-sm" itemprop="award">
+                        <strong>{{ item.name }}</strong>&nbsp
+                        <a v-if="item.github_link !== undefined" :href="item.github_link" class="icon" target="_blank">
+                          <GitHub />
+                        </a>
+                        <a v-if="item.home_link !== undefined" :href="item.home_link" class="icon" target="_blank">
+                          <ArrowUpRight />
+                        </a>
                       </p>
-                      <p class="text-muted clear-margin-sm">
-                        <small>
-                          {{item.time}}
-                        </small>
+                      <p v-if="item.text_muted !== undefined" class="text-muted">
+                        <small> {{ item.text_muted }} </small>
                       </p>
-                      <div></div>
-                      <i></i>
-                      <div class="space-top labels">
-                        
-                      </div>
+                      <p v-if="item.github_stars !== undefined" class="github-stars">
+                        <Stars class="stars" :url="item.github_stars" />
+                      </p>
                     </div>
                   </li>
-              </ul>
+                </div>
+                <li v-if="resume.projects.more !== undefined" class="card-nested text-muted">
+                  <a :href="resume.projects.more" target="_blank">More Projects...</a>
+                </li>
+                <div class="px10" />
+              </div>
             </div>
 
-
-            <h4 v-if="resume.talks !== undefined" id="publications"><span class="title">Talks</span> </h4>
-            <ul v-if="resume.talks !== undefined" class="list-unstyled">
-                <li v-for="item in resume.talks" class="card-nested" style="margin-bottom: 0.5em">
+            <div id="work-experience">
+              <h4> <span class="title">Work Experience</span> </h4>
+              <ul class="list-unstyled">
+                <li v-for="item in resume.work" class="card-nested relax">
                   <div class="content has-sidebar">
                     <p class="clear-margin-sm">
-                      <strong><a :href="item.location_link" target="_blank">{{item.location}}</a></strong>,&nbsp;
-                      {{item.unit}}
+                      <strong><a :href="item.link" target="_blank">{{ item.name }}</a></strong>
+                      <span class="text-muted" style="margin-left: 0.3em">{{ item.job_name }}</span>
                     </p>
-                    <p class="text-muted clear-margin-sm">
-                      <small> {{item.time}} </small>
-                      <small>,&nbsp;<a :href="item.slides_link" target="_blank">Slides</a></small>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> {{ item.space_right }}</span>
+                      </small>
                     </p>
-                    <p class="clear-margin">{{item.describe}}</p>
+                    <p />
+                    <ul class="highlight">
+                      <li v-for="date in item.highlight" v-html="date.content" />
+                    </ul>
                   </div>
                 </li>
-            </ul>
-
-            <h4 id="awards"><span class="title">Awards</span></h4>
-            <ul class="list-unstyled">
-                <li v-for="item in resume.awards" class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm" itemprop="award">
-                      <strong>{{item.name}}</strong>,&nbsp;
-                      {{item.unit}}
-                    </p>
-                    <p class="text-muted clear-margin-sm">
-                      <small> {{item.time}} </small>
-                    </p>
-                    
-                  </div>
-                </li>
-            </ul>
-
-
-
-
-            <h4 id="languages"><span class="title">Languages</span> </h4>
-            <p class="card-nested">
-                <span v-for="item in resume.languages" class="enumeration"><strong>{{item.name}}</strong> ({{item.proficiency}})</span>
-            </p>
-
+              </ul>
+            </div>
           </div>
+
+          <h4 id="skills">
+            <span class="title">Stacks</span>
+          </h4>
+          <div class="card-nested" itemprop="description">
+            <div class="skill-table">
+              <div class="name">
+                Frontend
+              </div>
+              <div>{{ resume.stacks.frontend }}</div>
+              <div class="name">
+                Backend
+              </div>
+              <div>{{ resume.stacks.backend }}</div>
+              <div class="name">
+                Mobile
+              </div>
+              <div>{{ resume.stacks.mobile }}</div>
+              <div class="name">
+                DevOps
+              </div>
+              <div>{{ resume.stacks.devOps }}</div>
+              <div class="name">
+                Languages
+              </div>
+              <div>{{ resume.stacks.languages }}</div>
+            </div>
+          </div>
+          <div class="px10" />
+
+          <div id="education">
+            <h4><span class="title">Education</span></h4>
+            <ul class="list-unstyled">
+              <li v-for="item in resume.education" class="card-nested">
+                <div class="content has-sidebar">
+                  <p class="clear-margin-sm">
+                    <strong> {{ item.profession }}</strong>,&nbsp;
+                    {{ item.school }}
+                  </p>
+                  <p class="text-muted clear-margin-sm">
+                    <small>
+                      {{ item.time }}
+                    </small>
+                  </p>
+                  <div />
+                  <i />
+                  <div class="space-top labels" />
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h4 v-if="resume.talks !== undefined" id="publications">
+            <span class="title">Talks</span>
+          </h4>
+          <ul v-if="resume.talks !== undefined" class="list-unstyled">
+            <li v-for="item in resume.talks" class="card-nested" style="margin-bottom: 0.5em">
+              <div class="content has-sidebar">
+                <p class="clear-margin-sm">
+                  <strong><a :href="item.location_link" target="_blank">{{ item.location }}</a></strong>,&nbsp;
+                  {{ item.unit }}
+                </p>
+                <p class="text-muted clear-margin-sm">
+                  <small> {{ item.time }} </small>
+                  <small>,&nbsp;<a :href="item.slides_link" target="_blank">Slides</a></small>
+                </p>
+                <p class="clear-margin">
+                  {{ item.describe }}
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <h4 id="awards">
+            <span class="title">Awards</span>
+          </h4>
+          <ul class="list-unstyled">
+            <li v-for="item in resume.awards" class="card-nested">
+              <div class="content has-sidebar">
+                <p class="clear-margin-sm" itemprop="award">
+                  <strong>{{ item.name }}</strong>,&nbsp;
+                  {{ item.unit }}
+                </p>
+                <p class="text-muted clear-margin-sm">
+                  <small> {{ item.time }} </small>
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <h4 id="languages">
+            <span class="title">Languages</span>
+          </h4>
+          <p class="card-nested">
+            <span v-for="item in resume.languages" class="enumeration"><strong>{{ item.name }}</strong> ({{ item.proficiency }})</span>
+          </p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style scoped>
